@@ -1,0 +1,53 @@
+{% extends 'feedback/base.html' %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block page %}Admin Dashboard{% endblock %}
+
+{% block content %}
+
+<!-- STATS -->
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card p-3">
+            <h6>Total Companies</h6>
+            <h3>{{ companies|length }}</h3>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card p-3">
+            <h6>Total Feedback</h6>
+            <h3>128</h3>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card p-3">
+            <h6>Managers</h6>
+            <h3>5</h3>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card p-3">
+            <h6>Employees</h6>
+            <h3>42</h3>
+        </div>
+    </div>
+</div>
+
+<!-- COMPANIES -->
+<h5 class="mb-3">Companies</h5>
+
+<div class="row">
+{% for company in companies %}
+<div class="col-md-4 mb-4">
+    <div class="card p-4 text-center">
+        <img src="https://logo.clearbit.com/{{ company.name|lower }}.com"
+             class="logo mx-auto mb-3"
+             onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
+        <h6 class="fw-bold">{{ company.name }}</h6>
+        <p class="text-muted">Enterprise feedback monitoring</p>
+        <button class="btn btn-outline-primary btn-sm">View Analytics</button>
+    </div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

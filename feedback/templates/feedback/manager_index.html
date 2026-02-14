@@ -1,0 +1,16 @@
+{% extends 'feedback/base.html' %}
+{% block page %}Manager Dashboard{% endblock %}
+
+{% block content %}
+<div class="card p-4">
+<h5>Assigned Companies</h5>
+<ul class="list-group mt-3">
+{% for company in companies %}
+<li class="list-group-item d-flex justify-content-between">
+    {{ company.name }}
+    <span class="badge bg-success">Active</span>
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endblock %}
