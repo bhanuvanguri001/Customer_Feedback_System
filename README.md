@@ -1,33 +1,38 @@
-# Customer-Feedback
+# Customer Feedback Analysis System
 
-This a web-based tool using Django Web Framework for collecting customer feedback.
+A Django-based web application to collect, store, and analyze customer feedback
+to identify trends and improve customer satisfaction.
 
-The project has been deployed to the cloud and hosted at PythonAnywhere. 
+## Features
+- Customer feedback submission
+- Feedback management dashboard
+- Data storage using SQLite
+- Clean and simple UI
+- Django backend architecture
 
-http://customerfeedback.pythonanywhere.com
+## Technologies Used
+- Python
+- Django
+- HTML, CSS
+- SQLite
+- Git & GitHub
 
-Credentials for admin
+## Project Structure
+- templates/ – HTML templates
+- static/ – CSS & assets
+- feedback/ – Django app
+- manage.py – Django entry point
 
-Username: admin
+## How to Run
+1. Clone the repository
+2. Install dependencies  
+   `pip install django`
+3. Run migrations  
+   `python manage.py migrate`
+4. Start server  
+   `python manage.py runserver`
 
-Password: mji4kef2
-
-There are 3 user roles for this app: Admin, Employee, and Customer. Admins manage the
-system and view feedback. Employees use the app to solicit feedback from customers. 
-
-Customers use the app to give feedback on various companies.
-
-# Emails
-Once a customer adds a review, the employee assigned to that company will receive an email that someone has added a review.
-
-The app also sends out weekly reminder emails to all staff (admin and employees) on activity carried out in the app in the previous week (i.e reviews/companies/employess added,companies reassigned etc)
-
-I've used the django.core.mail module from django
-
-# Graphs
-
-Using the FusionCharts Django Wrapper, I've been able to embed javascript charts in my django application.
-
-These graphing facilities are used provide important statistics and data (on companies, employees and reviews) to admin on the home page.
-
-
+## Author
+Bhanu Prasad  
+B.Tech CSE (2026)
+# Customer Feedback Analysis System 
